@@ -1,66 +1,117 @@
+/* Estilo global */
 body {
-    background: linear-gradient(var(--color--one), var(--color--one--rgba));
-    background-repeat: no-repeat;
-    padding: 10%;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: "Roboto-Regular";
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); /* Degradado más dinámico */
+  background-repeat: no-repeat;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  overflow-x: hidden;
+  color: #ffffff;
+  overflow-y: hidden;
 }
 
-:root {
-    --color--one: #14162C;
-    --color--one--rgba: #191b3fdf;
-    --color--two: #cfcfd1;
-    --color--three: #298bfe;
-    --color--four: #e52d2d;
-    --color--five: #ffffff;
-    --color--six: #ffd733;
-
-    --layout-description-container-x: 10px;
-    --layout-description-container-y: 10px;
+/* Contenedor principal */
+.principal {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1400px; /* Ajustado a pantallas más comunes */
+  margin: 0 auto;
+  padding: 2rem;
+  gap: 2rem;
 }
 
+/* Títulos */
 h1 {
-    color: var(--color--five);
-    font-size: 60px;
-    letter-spacing: 0;
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #f4f4f4;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Efecto de sombra */
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
 }
 
-p {
-    color: var(--color--five);
-    text-align: justify;
-    max-width: 500px;
-    font-size: 25px;
+/* Estilo para párrafos */
+.mensaje p {
+  text-align: justify;
+  max-width: 900px;
+  font-size: 1.25rem;
+  line-height: 1.7;
+  color: #e1e1e1;
+  margin-bottom: 1.5rem;
 }
 
-.image {
-    margin-top: -950px;
-    margin-left: 900px;
+/* Imagen */
+.image img {
+  object-fit: cover; /* Ajusta la imagen al tamaño del contenedor */
+  border-radius: 30%;
+  max-width: 400px;
+  height: auto;
+  transition: transform 0.4s ease, box-shadow 0.4s ease; /* Animación en hover */
 }
 
+.image img:hover {
+  background-color: #203a43;
+  transform: scale(1.05); /* Aumenta un poco el tamaño al pasar el mouse */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* Añade una sombra suave */
+}
+
+/* Estilos responsivos */
 @media (max-width: 768px) {
-    body {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        background-color: #fdb185;
-        height: auto;
-        margin: 0;
-        padding-top: 15px;
-    }
+  body {
+    background-size: cover;
+    padding: 1rem;
+  }
 
-    .image {
-        display: none;
-    }
+  .principal {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 1px;
+  }
 
-    h1 {
-        font-size: 40px;
-        text-align: center;
-    }
+  h1 {
+      font-size: 1rem;
+  }
 
-    p {
-        font-size: 18px;
-        max-width: 90%;
-        text-align: center;
-    }
+  .mensaje p {
+      font-size: 0.60rem;
+  }
+
+  .image img {
+    max-width: 70%;
+    height: auto;
+    margin-left: 150px;
+    margin-top: -20%;
+    transform: scale(0.90); 
+    transition: transform 0.3s ease; 
 }
+
+/* Efecto hover */
+.image img:hover {
+    transform: scale(0.80); 
+}
+}
+
+/* 
+button {
+  background-color: #1c87c9;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: #555;
+  color: white;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+} */
