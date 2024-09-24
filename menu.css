@@ -1,0 +1,127 @@
+body {
+  background: linear-gradient(#14162C, rgba(25, 27, 63, 0.87));
+  /* Degradado más dinámico */
+  background-repeat: no-repeat;
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  overflow-x: hidden;
+  color: #ffffff;
+  overflow-y: hidden;
+}
+
+h1 {
+  padding: 30px;
+  display: flex;
+  color: white;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+}
+
+/* Efecto de inclinación con animación suave */
+.imagen {
+  width: 55%;
+  perspective: 1000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px auto;
+}
+
+.tilt-image {
+  width: 43%;
+  height: auto;
+  transition: transform 0.5s ease-out, box-shadow 0.5s ease-out;
+  transform-style: preserve-3d;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+}
+
+.imagen:hover .tilt-image {
+  transform: rotateY(15deg) rotateX(15deg);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
+}
+
+/* Estilo del footer con mejoras */
+.footer {
+  display: grid;
+  grid-template-columns: 1fr 8fr 1fr;
+  grid-template-areas: ". footer__menu .";
+}
+
+.footer ul {
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  grid-area: footer__menu;
+  background-color: #14162C;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  padding: 30px 0;
+}
+
+.footer ul::before,
+.footer ul::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  bottom: -100px;
+  border-style: solid;
+}
+
+.footer ul::before {
+  left: -36px;
+  border-width: 0 48px 70px 0;
+}
+
+.footer ul::after {
+  right: -36px;
+  border-width: 0 0 70px 48px;
+}
+
+.footer ul li {
+  list-style: none;
+  text-align: center;
+}
+
+.footer ul li a {
+  text-decoration: none;
+  color: #cfcfd1;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: color 0.3s ease;
+}
+
+.footer ul li a:hover {
+  color: #ffffff;
+}
+
+.select {
+  padding: 8px 0;
+  border-bottom: 4px solid #ffffff;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .tilt-image {
+      width: 90%;
+      transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+  }
+  .footer ul {
+      flex-direction: column;
+      gap: 10px;
+  }
+
+  .footer ul li a {
+      font-size: 6px;
+  }
+  .footer img{
+    width: 60%;
+  }
+}
