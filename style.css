@@ -1,6 +1,5 @@
-/* Estilo global */
 body {
-  background: linear-gradient(#14162C, rgba(25, 27, 63, 0.87)); /* Degradado más dinámico */
+  background: linear-gradient(#14162C, rgba(25, 27, 63, 0.87));
   background-repeat: no-repeat;
   padding: 0;
   margin: 0;
@@ -10,19 +9,17 @@ body {
   overflow-y: hidden;
 }
 
-/* Contenedor principal */
 .principal {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 1400px; /* Ajustado a pantallas más comunes */
+  max-width: 1400px;
   margin: 0 auto;
   padding: 20rem;
   gap: 2rem;
   margin-top: -10%;
 }
 
-/* Títulos */
 h1 {
   font-size: 3.5rem;
   font-weight: 700;
@@ -32,7 +29,6 @@ h1 {
   margin-bottom: 1rem;
 }
 
-/* Estilo para párrafos */
 .mensaje p {
   text-align: justify;
   max-width: 900px;
@@ -58,7 +54,6 @@ h1 {
 }
 
 
-/* Estilos responsivos para pantallas pequeñas */
 @media (max-width: 768px) {
   body {
     background-size: cover;
@@ -84,11 +79,11 @@ h1 {
   }
 
   h1 {
-      font-size: 1.5rem;  /* Ajusté el tamaño de fuente para mayor legibilidad */
+      font-size: 1.5rem;
   }
 
   .mensaje p {
-      font-size: 0.9rem;  /* Ajusté para que sea más legible */
+      font-size: 0.9rem; 
       max-width: 90%;
   }
 
@@ -101,7 +96,6 @@ h1 {
       transition: transform 0.3s ease; 
   }
 
-  /* Efecto hover */
   .image img:hover {
       transform: scale(0.90); 
   }
