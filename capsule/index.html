@@ -1,68 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capsule</title>
+    <link rel="stylesheet" href="../imagen/dplnews_SpaceX_mc261020.jpg">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
-    <script type="module" src="./main.js"></script>
+    <script type="module" src="./main.js" defer></script>
 </head>
-
 <body>
-    <div class="main">
-        <div id="todo">
-            <div id="right">
-                <div class="content">
-                    <div class="reuse"></div>
-                    <div class="water"></div>
-                    <div class="land"></div>
-                </div>
-                <div id="information">
-                    <div class="serial"></div>
-                    <div class="status"></div>
-                    <div class="type"></div>
-                </div>
-                <div class="last_up"></div>
-            </div>
+    
+    <div id="all">
+        <div id="top">
+            <div id="logotipo"><img src="../imagen/dplnews_SpaceX_mc261020.jpg"></div>
+            <div class="last_up"></div>
+        </div>
+        <div id="left">
+            
+        </div>
+        
+        <div class="contenido">
+            
         </div>
     </div>
-    <div class="pagination">
-        <button id="antes" onclick="prew()"><<</button>
-                <button id="num" onmouseover="cambia()" identificador="1">1</button>
-                <button id="num" onmouseover="cambia()" identificador="2">2</button>
-                <button id="num" onmouseover="cambia()" identificador="3">3</button>
-                <button id="num" onmouseover="cambia()" identificador="4">4</button>
-                <button id="siguiente" onclick="next()">>></button>
+    
+    <div class="paginacion">
+        <button id="prew" onclick="prew()">&lt;&lt;</button>
+        <button id="numero" onclick="cambiar()" data-id="1">1</button>
+        <button id="numero" onclick="cambiar()" data-id="2">2</button>
+        <button id="numero" onclick="cambiar()" data-id="3">3</button>
+        <button id="numero" onclick="cambiar()" data-id="4">4</button>
+        <button id="next" onclick="next()">&gt;&gt;</button>
     </div>
-    <footer class="footer">
-        <ul>
-            <li>
-                <a class="select" href="#">
-                    <img src="../imagen/rocket.svg" alt="Rocket">
-                    <span>Rockets</span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <img src="../imagen/capsule.svg" alt="Capsule">
-                    <span>Capsules</span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <img src="../imagen/comms.svg" alt="Company">
-                    <span>Company</span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <img src="../imagen/prop.svg" alt="History">
-                    <span>History</span>
-                </a>
-            </li>
-        </ul>
-    </footer>
+    <div class="botones">
+        <button class="icons">
+            <a href="../ROKETS/index.html">
+                <img src="../imagen/rocket.svg" alt="">
+                <p>Rockets</p>
+            </a>
+        </button>
+        <button class="icons actual" >
+            <a href="../CAPSULES/inde.html">
+                <img src="../imagen/capsule.svg" alt="">
+                <p>Capsules</p>
+            </a>
+        </button>
+        <button class="icons">
+            <a href="../COMPANY/index.html">
+                <img src="../imagen/comms.svg" alt="">
+                <p>Company</p>
+            </a>
+        </button>
+        <button class="icons">
+            <a href="../HISTORY/index.html">
+                <img src="../imagen/prop.svg" alt="">
+                <p>History</p>
+            </a>
+        </button>
     </div>
 </body>
 </html>
