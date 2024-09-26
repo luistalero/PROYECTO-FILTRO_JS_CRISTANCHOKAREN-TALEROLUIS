@@ -4,7 +4,7 @@ let largo_dato;
 function pg_actual(){
     let numeros = document.querySelectorAll(".numero");
     numeros.forEach(e => {
-        if (e.getAttribute('data-id')-1==nave) {
+        if (e.getAttribute('data-id')-1 == nave) {
             e.setAttribute('id','pg');
         } else {
             e.removeAttribute('id');
@@ -16,7 +16,7 @@ function change(){
     numeros.forEach(e => {
         e.addEventListener("click", () => {
             nave = e.getAttribute("data-id")-1;
-            roket()
+            god()
         });
     });
 }
@@ -86,17 +86,17 @@ function god(){
             <img src="../img/icons/mech.svg" alt="">
             <div class="text">
                 <h2>Read more about the cohete</h2>
-                <a href="${info[nave].wikipedia}" style = "color: white;">Wikipedia</a>
+                <a href="${info[nave].wikipedia}" target="_blank" style = "color: white; text-decoration: none;">Wikipedia</a>
             </div>
         </div>
        `;
-       let velocidadAtmosferica = parseInt((info[nave].engine.thurst_sea_level.kN/1780)*100)
+       let velocidadAtmosferica = parseInt((info[nave].engines.thrust_sea_level.kN/1780)*100)
        document.querySelector(".info").innerHTML = `
        <div class="parte1">
             <div class="item__progress__bar"
-                style="background: radial-gradient(closest-side, #1d1f38 85%, transparent 85% 100%), conic-gradient(var(--color--three) ${aceleracion_atmosferica}%, transparent 0);">
+                style="background: radial-gradient(closest-side, #1d1f38 85%, transparent 85% 100%), conic-gradient(var(--color--three) ${velocidadAtmosferica}%, transparent 0);">
                 <div class="progress__value"><strong>Atmospheric acceleration</strong><small>${velocidadAtmosferica}
-                        %</small><small>${info[cohete].engines.thrust_sea_level.kN} kN <br> ${info[cohete].engines.thrust_sea_level.lbf} Lbf</small></div>
+                        %</small><small>${info[nave].engines.thrust_sea_level.kN} kN <br> ${info[nave].engines.thrust_sea_level.lbf} Lbf</small></div>
             </div>
             <div class="info_rocket">
                 <h3>INFORMATION ROCKET</h3>
@@ -158,12 +158,12 @@ function god(){
             <div class="carousel__item"><img src="${img}" referrerpolicy="no_referrer"></div>
             `;
         });
-        let speedSpace = parseInt((info[nave].engines.thurst_vacuum.kN/1960)*100);
+        let speedSpace = parseInt((info[nave].engines.thrust_vacuum.kN/1960)*100);
         document.querySelector(".parte3").innerHTML = `
         <div class="item__progress__bar"
             style = "background: radial-gradient(closest-side, #1d1f38 85%, transparent 85% 100%), conic-gradient(var(--color--three) ${speedSpace}%, transparent 0);">
             <div class="progress__value"><strong>Speed in space</strong><smal>${speedSpace}
-                    %</small><small>${info[nave].engines.thurst_vacuum.kN} kN <br> ${info[nave].engines.thurst_vacuum.lbf} Lbf</small></div>
+                    %</small> <br> <small>${info[nave].engines.thrust_vacuum.kN} kN <br> ${info[nave].engines.thrust_vacuum.lbf} Lbf</small></div>
         </div>
         <div class="info_rocket">
             <h3>ENGINE INFORMATION</h3>
@@ -196,11 +196,11 @@ function god(){
             <h3>SECOND STAGE</h3>
             <div>
                 <p>Thurst kn</p>
-                <span>${info[nave].second_stage.thurst.kN}</span>
+                <span>${info[nave].second_stage.thrust.kN}</span>
             </div>
             <div>
                 <p>Thurst lbf</p>
-                <span>${info[nave].second_stage.thurst.lbf}</span>
+                <span>${info[nave].second_stage.thrust.lbf}</span>
             </div>
             <div>
                 <p>option_1</p>
@@ -251,7 +251,7 @@ function god(){
             </div>
             <div class="valores">
                 <progress max="5.2" value="${info[nave].diameter.meters}">1420788%</progress>
-                <span>${info[cohete].diameter.meters} kg <br> ${info[nave].diameter.feet} lb</span>
+                <span>${info[nave].diameter.meters} kg <br> ${info[nave].diameter.feet} lb</span>
             </div>
         </div>
         <div class="information__container">
@@ -259,7 +259,7 @@ function god(){
                 <h3>Height rocket shield :</h3>
             </div>
             <div class="valores">
-                <progress max="13.1" value="${info[nave].second_stage.composite_fairing.diameter.meters}">1420788%</progress>
+                <progress max="13.1" value="${info[nave].second_stage.payloads.composite_fairing.diameter.meters}">1420788%</progress>
                 <span>${info[nave].second_stage.payloads.composite_fairing.diameter.meters} M <br> ${info[nave].second_stage.payloads.composite_fairing.diameter.feet} F</span>
             </div>
         </div>
