@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <script type="module" src="./main.js"></script>
+</head>
+
+<body>
+    <div class="main">
+        <div id="todo">
+            <div id="right">
+                <div class="content">
+                    <div class="reuse"></div>
+                    <div class="water"></div>
+                    <div class="land"></div>
+                </div>
+                <div id="information">
+                    <div class="serial"></div>
+                    <div class="status"></div>
+                    <div class="type"></div>
+                </div>
+                <div class="last_up"></div>
+            </div>
+        </div>
+    </div>
+    <div class="pagination">
+        <button id="antes" onclick="prew()"><<</button>
+                <button id="num" onmouseover="cambia()" identificador="1">1</button>
+                <button id="num" onmouseover="cambia()" identificador="2">2</button>
+                <button id="num" onmouseover="cambia()" identificador="3">3</button>
+                <button id="num" onmouseover="cambia()" identificador="4">4</button>
+                <button id="siguiente" onclick="next()">>></button>
+    </div>
+    <footer class="footer">
+        <ul>
+            <li>
+                <a class="select" href="#">
+                    <img src="../imagen/rocket.svg" alt="Rocket">
+                    <span>Rockets</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="../imagen/capsule.svg" alt="Capsule">
+                    <span>Capsules</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="../imagen/comms.svg" alt="Company">
+                    <span>Company</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="../imagen/prop.svg" alt="History">
+                    <span>History</span>
+                </a>
+            </li>
+        </ul>
+    </footer>
+    </div>
+</body>
+</html>

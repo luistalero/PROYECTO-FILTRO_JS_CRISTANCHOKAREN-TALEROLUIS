@@ -1,0 +1,105 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(#14162C, rgba(25, 27, 63, 0.87));
+}
+
+
+.main {
+    height: 90vh;
+    display: grid;
+    grid-template-columns: 1.5fr 6fr 2fr;
+    grid-template-areas: "nav__1 main nav__2";
+}
+
+.footer {
+    /* background: coral; */
+    grid-area: section__footer;
+    display: grid;
+    grid-template-columns: 1fr 8fr 1fr;
+    grid-template-areas: ". footer__menu .";
+}
+
+.footer ul {
+    grid-area: footer__menu;
+    background: #14162C;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+}
+.footer ul::after{
+    content: "";
+    position: relative;
+    margin-top: 10px;
+    right: -36px;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-left: 0px solid transparent;
+    border-right: 48px solid transparent;
+    border-bottom: 70px solid #14162C;
+}
+.footer ul::before{
+    content: "";
+    position: relative;
+    margin-top: 10px;
+    left: -36px;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-left: 48px solid transparent;
+    border-right: 0px solid transparent;
+    border-bottom: 70px solid  #14162C;
+}
+.footer ul li {
+    list-style: none;
+}
+
+.footer ul li a {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #cfcfd1;
+}
+.select{
+    padding: 8px 0;
+    border-bottom: 4px solid #ffffff;
+}
+
+.content{
+    border-radius: 10px;
+    margin: 4rem 5rem;
+    padding: 1rem;
+    width: 25rem;
+    font-size: clamp(1rem, 5vw, 1.3rem);
+    display: flex;
+    flex-direction: column;
+    font-family: light;
+    color: white;
+}
+
+.pagination{
+    position: fixed;
+    right: 5rem;   
+    bottom: 5rem;
+    display: flex;
+    border-radius: 10px;
+    overflow: hidden;
+    backdrop-filter: blur(20px);
+}
+.pagination button{
+    color: white;
+    padding: 0.5rem 0.7rem;
+    background-color: inherit;
+    border: none;
+}
+.pagination button:hover{
+    background-color: #14162C;
+}
