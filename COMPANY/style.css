@@ -56,7 +56,7 @@ body{
 .botones{
     position: fixed;
     display: flex;
-    background-color: #1a1c48;
+    background-color: #132131;
     bottom: 0;
     width: 70vw;
     height: 5rem;
@@ -74,9 +74,6 @@ body{
     border: none;
     cursor: pointer;
     position: relative;
-}
-.icons img{
-    width: 30%;
 }
 .icons a{
     text-decoration: none;
@@ -99,10 +96,23 @@ body{
     height: 4%;
     background-color: white;
 }
+a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
 h1{
     text-align: center;
     font-family: regular;
     color: white;
+}
+h2{
+    text-align: center;
+    font-family: regular;
+    color: white;
+}
+h3{
+    color: white;
+    margin-top: 2rem;
 }
 .titulo{
     width: 100%;
@@ -121,19 +131,15 @@ h1{
     font-family: regular;
 }
 .seccion{
-    display: flex;
-    align-items: flex-start;
     margin-top: 1rem;
     color: white;
 }
+
 .info{
     width: 60vw;
-    height: 40vw;
+    height: 50vw;
     border: 1px solid white;
-    display: flex;
     min-width: 40rem;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
     right: 0;
     overflow: hidden;
     background-color: #ffd733;
@@ -144,31 +150,30 @@ h1{
     font-family: light;
     background-color: #298bfe;
 }
-h3{
-    color: white;
-    margin-top: 2rem;
+.elonk {
+    width: 700px;
+    height: 500px;
+    background-color: #298bfe;
 }
-.info_rocket{
-    font-family: regular;
-    padding: 0 1rem;
-    width: 15vw;
-    height: 45vh;
+.elonk img {
+    width: 400px;
+    height: 400px;
 }
-.info_rocket h3{
-    text-align: center;
-}
-.info_rocket div{
+.info_elon {
     display: flex;
-    margin-top: 1rem;
-    color: white;
+    margin-left: 20px;
 }
-.info_rocket p{
-    width: 50%;
+.found {
+    margin-left: 20px;
 }
-.info_rocket span{
-    width: 50%;
-    font-weight: 700;
-    text-align: end;
+.empresa {
+    width: 700px;
+    height: 500px;
+    background-color: #1a3f69;
+}
+.empresa img {
+    width: 400px;
+    height: 400px;
 }
 @media(max-width:880px){
     .info{
