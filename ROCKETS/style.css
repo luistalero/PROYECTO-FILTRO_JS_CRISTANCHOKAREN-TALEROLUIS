@@ -114,7 +114,7 @@ h1{
     width: 15vw;
     height: 35rem;
     font-family: light;
-    overflow-y: hidden;
+    overflow-y: scroll;
 }
 .descripcion h2{
     font-family: regular;
@@ -214,7 +214,7 @@ progress{
     font-family: regular;
     padding: 0 1rem;
     width: 15vw;
-    height: 30vh;
+    height: 40vh;
 }
 .info_rocket h3{
     text-align: center;

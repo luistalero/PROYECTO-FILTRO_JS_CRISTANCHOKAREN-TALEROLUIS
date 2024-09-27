@@ -4,7 +4,7 @@ let largo_dato;
 function pg_actual(){
     let numeros = document.querySelectorAll(".numero");
     numeros.forEach(e => {
-        if (e.getAttribute('data-id')-1 == nave) {
+        if (parseInt(e.getAttribute('data-id')) - 1 === nave) {
             e.setAttribute('id','pg');
         } else {
             e.removeAttribute('id');
@@ -12,23 +12,24 @@ function pg_actual(){
     });
 }
 function change(){
-    let numeros = document.querySelectorAll(".numeros");
+    let numeros = document.querySelectorAll(".numero");
     numeros.forEach(e => {
         e.addEventListener("click", () => {
-            nave = e.getAttribute("data-id")-1;
-            god()
+            nave = parseInt(e.getAttribute("data-id")) - 1;
+            if (nave >= 0 && nave < largo_dato) {
+                god()
+            }
         });
     });
 }
 function siguiente(){
     let numeros = document.querySelectorAll(".numero");
     let contar = Number(numeros[0].getAttribute("data-id"));
-    let max = Number(numeros[2].getAttribute("data-id"));
-    if (contar < largo_dato) {
-        for (let a = 0; a <= 3; a++){
-            max += 1;
-            numeros[a].setAttribute("data-id", contar);
-            numeros[a].innerHTML = contar;
+    if (contar + 4 < largo_dato) {
+        contar++;
+        for (let a = 0; a < 4; a++){
+            numeros[a].setAttribute("data-id", contar + a);
+            numeros[a].innerHTML = contar + a;
         }
     }
     pg_actual();
@@ -36,12 +37,12 @@ function siguiente(){
 function anterior(){
     let numeros = document.querySelectorAll(".numero");
     let contar = Number(numeros[0].getAttribute("data-id"));
-    let max = Number(numeros[2].getAttribute("data-id"));
     if (contar > 1) {
-        for (let a = 2; a >= 0; a--){
+        contar--;
+        for (let a = 0; a < 4; a++){
             max -= 1;
-            numeros[a].setAttribute("data-id", max);
-            numeros[a].innerHTML = max;
+            numeros[a].setAttribute("data-id", contar + a);
+            numeros[a].innerHTML = contar + a;
         }
     }
     pg_actual();
@@ -123,7 +124,7 @@ function god(){
                 </div>
                 <div>
                     <p>Leg material</p>
-                    <span>${info[nave].landing_legs.material}</span>
+                    <span>${info[nave].landing_legs.material ?? 'N/A'}</span>
                 </div>
             </div>
             <div class="info_rocket">
@@ -152,12 +153,12 @@ function god(){
         <div class="parte3">
         </div>
         `;
-        document.getElementsByName("parte2").innerHTML = "";
+        let imagHTML = "";
         info[nave].flickr_images.forEach(img => {
-            document.querySelector(".parte2").innerHTML += `
-            <div class="carousel__item"><img src="${img}" referrerpolicy="no_referrer"></div>
-            `;
+        imagHTML += `<div class="carousel__item"><img src="${img}" referrerpolicy="no_referrer"></div>`;
         });
+        document.querySelector(".parte2").innerHTML = imagHTML;
+        
         let speedSpace = parseInt((info[nave].engines.thrust_vacuum.kN/1960)*100);
         document.querySelector(".parte3").innerHTML = `
         <div class="item__progress__bar"
@@ -173,7 +174,7 @@ function god(){
             </div>
             <div>
                 <p>Maximum power loss</p>
-                <span>${info[nave].engines.engine_loss_max}</span>
+                <span>${info[nave].engines.engine_loss_max ?? 'N/A'}</span>
             </div>
             <div>
                 <p>Engine availability</p>
