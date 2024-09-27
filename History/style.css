@@ -1,0 +1,98 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    flex-wrap: wrap;
+    min-height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    background: linear-gradient(#14162C, rgba(25, 27, 63, 0.87));
+    background-repeat: no-repeat;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.load{
+    background: linear-gradient(120deg, #ffffff0e 30%, #ffffff23 38%, #f0f0f032 40%, #e5e5e50c 40%);
+    background-size: 200% 100%;
+    background-position: 100% 0;
+    animation: load 2s infinite;
+    width: 100%;
+    margin: 12px 0;
+    height: 100px;
+}
+@keyframes load{
+    100%{
+        background-position: -100% 0;
+    }
+}
+.botones{
+        position: fixed;
+        display: flex;
+        background-color: #1a1c48;
+        bottom: 0;
+        width: 40rem;
+        justify-content: space-evenly;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 10px 0;
+        border-top-left-radius: 40px;
+        border-top-right-radius: 40px;
+        gap: 1rem; /* Ajusta el espacio entre los íconos si es necesario */
+        text-align: center;
+}
+.icons{
+    width: 5%;
+    margin-top: 3%;
+    background-color: inherit;
+    border: none;
+    cursor: pointer;
+    position: relative;
+}
+.icons img{
+    width: 100%;
+}
+.icons p{
+    margin: 0;
+    text-align: center;
+    color: white;
+}
+.actual{
+    margin: 0;
+}
+.actual::after{
+    position: absolute;
+    content: '';
+    width: 100%;
+    left: 0;
+    bottom: 8%;
+    border-radius: 2px;
+    height: 4%;
+    background-color: white;
+}
+a{
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease-in-out;
+    font-size: 1.1rem;
+}
+
+.paginacion{
+    position: fixed;
+    right: 5rem;   
+    bottom: 5rem;
+    display: flex;
+    border-radius: 10px;
+    overflow: hidden;
+    backdrop-filter: blur(20px);
+}
+.paginacion button{
+    color: white;
+    padding: 0.5rem 0.7rem;
+    background-color: inherit;
+    border: none;
+}
+.paginacion button:hover{
+    background-color: #3340d6;
+}

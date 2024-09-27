@@ -1,35 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Capsule</title>
+    <title>Document</title>
     <link rel="shortcut icon" href="../imagen/cohete.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
-    <script src="./main.js" defer></script>
+    <script src="./main.js"></script>
 </head>
+
 <body>
-    
-    <div id="all">
-        <div id="top">
-            <div id="logotipo"><img src="../imagen/dplnews_SpaceX_mc261020-removebg-preview.png"></div>
-            <div class="last_up"></div>
+    <div class="inicio">
+        <div class="titulo">
+            <div class="load"></div>
         </div>
-        <div id="left">
-            
+        <div class="details">
+            <div class="load"></div>
         </div>
-        
-        <div class="contenido">
-            
+        <div class="events1">
+            <div class="load"></div>
+        </div>
+        <div class="events2">
+            <div class="load"></div>
+        </div>
+        <div class="article">
+            <div class="load"></div>
         </div>
     </div>
-    
     <div class="paginacion">
         <button id="prew" onclick="prew()">&lt;&lt;</button>
-        <button id="numero" onclick="cambiar()" data-id="1">1</button>
-        <button id="numero" onclick="cambiar()" data-id="2">2</button>
-        <button id="numero" onclick="cambiar()" data-id="3">3</button>
-        <button id="numero" onclick="cambiar()" data-id="4">4</button>
+        <button class="numero" onmouseover="cambiar()" data-id="1">1</button>
+        <button class="numero" onmouseover="cambiar()" data-id="2">2</button>
+        <button class="numero" onmouseover="cambiar()" data-id="3">3</button>
         <button id="next" onclick="next()">&gt;&gt;</button>
     </div>
     <div class="botones">
@@ -39,7 +42,7 @@
                 <p>Rockets</p>
             </a>
         </button>
-        <button class="icons actual" >
+        <button class="icons" >
             <a href="../CAPSULES/inde.html">
                 <img src="../imagen/capsule.svg" alt="">
                 <p>Capsules</p>
@@ -51,7 +54,7 @@
                 <p>Company</p>
             </a>
         </button>
-        <button class="icons">
+        <button class="icons actual">
             <a href="../HISTORY/index.html">
                 <img src="../imagen/prop.svg" alt="">
                 <p>History</p>
@@ -59,4 +62,5 @@
         </button>
     </div>
 </body>
+
 </html>
