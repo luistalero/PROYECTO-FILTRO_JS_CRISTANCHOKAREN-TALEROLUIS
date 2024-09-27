@@ -9,23 +9,24 @@ body{
     min-height: 100vh;
     width: 100vw;
     overflow-x: hidden;
-    background: linear-gradient(217deg, #14162C, rgba(255, 0, 0, 0) 100%),
-        linear-gradient(127deg, #14162C, #14162C 50.45%),
-        linear-gradient(127deg, #FFFFFF, #1a1c48 50.45%);
+    background: linear-gradient(#14162C, rgba(25, 27, 63, 0.87));
+    background-repeat: no-repeat;
+    font-family: Arial, Helvetica, sans-serif;
 }
 .botones{
     position: fixed;
     display: flex;
     background-color: #1a1c48;
     bottom: 0;
-    width: 25rem;
+    width: 40rem;
     justify-content: space-evenly;
     left: 50%;
     transform: translateX(-50%);
-    font-family: light;
-    padding: 15px 0;
+    padding: 10px 0;
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
+    gap: 5rem;
+    text-align: center;
 }
 .icons{
     width: 20%;
@@ -57,7 +58,10 @@ body{
     background-color: white;
 }
 a{
-    
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease-in-out;
+    font-size: 1.1rem;
 }
 #all{
     margin-bottom: 10rem;
@@ -72,18 +76,23 @@ a{
     padding: 2rem 1rem;
 }
 #logotipo img{
-    width: 15rem;
+    margin-top: -30%;
+    width: 25rem;
 }
 .last_up{
     margin-right: 7rem;
     color: white;
-    font-family: regular;
     font-size: clamp(1rem, 3vw, 1.2rem);
+    font-weight: bold;
+    line-height: 1.5;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
 }
 #left{
     border-radius: 20px;
     margin: 0 auto;
-    width: 50%;
+    width: 40%;
     border: 1px solid white;
     overflow-x: auto;
     display: flex;
@@ -106,18 +115,16 @@ a{
 #name{
     color: white;
     font-size: clamp(1.5rem, 4vw, 2rem);
-    font-family: bold;
 }
 #logo img{
     width: 6rem;
 }
 .details{
     margin: 0 auto;
-    font-family: light;
     font-size: 1.3rem;
     color: white;
     padding: 2rem;
-    width: 45rem;
+    width: 30rem;
 }
 #pictures{
     width: 40%;
@@ -139,13 +146,14 @@ a{
     height: 15vw;
 }
 .contenido{
-    margin: 2rem auto;
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    gap: 1rem;
+    margin-left: 10%;
+    gap: 2rem;
     font-family: light;
     color: white;
+    flex-direction: column;
+    margin-top: -50%;
 }
 #info{
     width: 4rem;
@@ -161,7 +169,6 @@ p.conte{
 }
 h3{
     text-align: center;
-    font-family: bold;
 }
 .paginacion{
     position: fixed;
@@ -200,9 +207,12 @@ h3{
         margin: 4rem auto;
         width: 80%;
     }
-    #information{
-        width: 80%;
-        margin: 4rem auto;
+    #informacion{
+        width: 10%;
+        height: 5%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
     }
     .last_up{
         margin: 0 auto;
