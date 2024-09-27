@@ -1,5 +1,7 @@
 body {
-  background: linear-gradient(#14162C, rgba(25, 27, 63, 0.87));
+  background: linear-gradient(217deg, #13142D, rgba(255, 0, 0, 0) 100%),
+        linear-gradient(127deg, #13142D, #69AEFF 50.45%),
+        linear-gradient(127deg, #FFFFFF, #69AEFF 50.45%);
   background-repeat: no-repeat;
   padding: 0;
   margin: 0;
@@ -48,7 +50,7 @@ h1 {
 }
 
 .image img:hover {
-  background-color: #203a43;
+  background-color: #215ea3;
   transform: scale(1.05); /* Aumenta un poco el tamaño al pasar el mouse */
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* Añade una sombra suave */
 }

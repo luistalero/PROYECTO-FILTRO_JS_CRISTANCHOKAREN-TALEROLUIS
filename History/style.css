@@ -4,16 +4,7 @@
     box-sizing: border-box;
 }
 
-body{
-    flex-wrap: wrap;
-    min-height: 100vh;
-    width: 100vw;
-    overflow-x: hidden;
-    background: linear-gradient(#14162C, rgba(25, 27, 63, 0.87));
-    background-repeat: no-repeat;
-    font-family: Arial, Helvetica, sans-serif;
-}
-.load{
+.load {
     background: linear-gradient(120deg, #ffffff0e 30%, #ffffff23 38%, #f0f0f032 40%, #e5e5e50c 40%);
     background-size: 200% 100%;
     background-position: 100% 0;
@@ -21,47 +12,165 @@ body{
     width: 100%;
     margin: 12px 0;
     height: 100px;
+    border-radius: 10px;
 }
-@keyframes load{
-    100%{
+
+@keyframes load {
+    100% {
         background-position: -100% 0;
     }
 }
-.botones{
-        position: fixed;
-        display: flex;
-        background-color: #1a1c48;
-        bottom: 0;
-        width: 40rem;
-        justify-content: space-evenly;
-        left: 50%;
-        transform: translateX(-50%);
-        padding: 10px 0;
-        border-top-left-radius: 40px;
-        border-top-right-radius: 40px;
-        gap: 1rem; /* Ajusta el espacio entre los íconos si es necesario */
-        text-align: center;
+
+body {
+    overflow-x: hidden;
+    background: linear-gradient(217deg, #13142D, rgba(255, 0, 0, 0) 100%),
+        linear-gradient(127deg, #13142D, #69AEFF 50.45%),
+        linear-gradient(127deg, #FFFFFF, #69AEFF 50.45%);
+    background-repeat: no-repeat;
+    font-family: Arial, Helvetica, sans-serif;
+    flex-wrap: wrap;
+    min-height: 100vh;
+    width: 100vw;
 }
-.icons{
+
+
+.principal {
+    padding-bottom: 10rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.titulo {
+    color: white;
+    padding: 2rem 4rem;
+    width: 100%;
+}
+
+.details {
+    width: 100%;
+}
+
+.center {
+    width: 60%;
+    height: 25vw;
+    min-height: 20rem;
+    margin: 2rem 2rem;
+}
+
+.center iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.rigth {
+    padding: 2rem 0;
+}
+
+h2 {
+    color: white;
+    font-size: 1.2rem;
+    padding-left: 3rem;
+    padding-top: 1rem;
+}
+
+.p {
+    padding-left: 3rem;
+    width: 70%;
+    color: rgb(169, 169, 169);
+}
+
+#pag {
+    background-color: #14162C;
+}
+
+.article {
+    padding-left: 3rem;
+    padding-top: 2rem;
+}
+
+.boton a {
+    text-decoration: none;
+    color: white;
+}
+
+.boton {
+    border-radius: 3px;
+    padding: 1rem 2rem;
+    border: solid white;
+    background-color: transparent;
+    position: relative;
+    cursor: pointer;
+}
+
+.boton::before {
+    position: absolute;
+    content: '';
     width: 5%;
-    margin-top: 3%;
+    height: 100%;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+    top: 0;
+    left: 0;
+    background-color: white;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+.boton:hover:before {
+    width: 95%;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.boton:hover a {
+    color: black;
+}
+
+
+.botones {
+    position: fixed;
+    display: flex;
+    background-color: #032d5e;
+    bottom: 0;
+    width: 70vw;
+    height: 5rem;
+    justify-content: space-evenly;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: light;
+    clip-path: polygon(6% 0, 94% 0, 100% 100%, 0% 100%);
+    padding: 0 4%;
+}
+
+.icons {
+    width: 10%;
+    margin-top: 0%;
     background-color: inherit;
     border: none;
     cursor: pointer;
     position: relative;
 }
-.icons img{
-    width: 100%;
+
+.icons img {
+    width: 30%;
 }
-.icons p{
+
+.icons a {
+    text-decoration: none;
+}
+
+.icons p {
     margin: 0;
     text-align: center;
     color: white;
 }
-.actual{
+
+.actual {
     margin: 0;
 }
-.actual::after{
+
+.actual::after {
     position: absolute;
     content: '';
     width: 100%;
@@ -71,28 +180,36 @@ body{
     height: 4%;
     background-color: white;
 }
-a{
-    text-decoration: none;
-    color: white;
-    transition: color 0.3s ease-in-out;
-    font-size: 1.1rem;
-}
 
-.paginacion{
+.paginacion {
+    position: absolute;
     position: fixed;
-    right: 5rem;   
+    right: 2rem;
     bottom: 5rem;
     display: flex;
     border-radius: 10px;
     overflow: hidden;
-    backdrop-filter: blur(20px);
 }
-.paginacion button{
+
+.paginacion button {
     color: white;
     padding: 0.5rem 0.7rem;
     background-color: inherit;
     border: none;
 }
-.paginacion button:hover{
-    background-color: #3340d6;
+
+.paginacion button:hover {
+    background-color: #191b3fdf;
+}
+
+@media(max-width:700px) {
+    .botones {
+        width: 20rem;
+    }
+}
+
+@media(max-width:685px) {
+    .center {
+        width: 100%;
+    }
 }

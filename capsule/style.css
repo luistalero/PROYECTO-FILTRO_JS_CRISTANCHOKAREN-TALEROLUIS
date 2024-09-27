@@ -9,35 +9,46 @@ body{
     min-height: 100vh;
     width: 100vw;
     overflow-x: hidden;
-    background: linear-gradient(#14162C, rgba(25, 27, 63, 0.87));
+    background: linear-gradient(217deg, #13142D, rgba(255, 0, 0, 0) 100%),
+        linear-gradient(127deg, #13142D, #69AEFF 50.45%),
+        linear-gradient(127deg, #FFFFFF, #69AEFF 50.45%);
     background-repeat: no-repeat;
     font-family: Arial, Helvetica, sans-serif;
 }
+
+*::-webkit-scrollbar {
+    color: transparent;
+    cursor: pointer;
+}
+
+
 .botones{
     position: fixed;
     display: flex;
-    background-color: #1a1c48;
+    background-color: #032d5e;
     bottom: 0;
-    width: 40rem;
+    width: 70vw;
+    height: 5rem;
     justify-content: space-evenly;
     left: 50%;
     transform: translateX(-50%);
-    padding: 10px 0;
-    border-top-left-radius: 40px;
-    border-top-right-radius: 40px;
-    gap: 5rem;
-    text-align: center;
+    font-family: light;
+    clip-path: polygon(6% 0, 94% 0, 100% 100%, 0% 100%);
+    padding: 0 4%;
 }
 .icons{
-    width: 20%;
-    margin-top: 3%;
+    width: 10%;
+    margin-top: 0%;
     background-color: inherit;
     border: none;
     cursor: pointer;
     position: relative;
 }
 .icons img{
-    width: 40%;
+    width: 30%;
+}
+.icons a{
+    text-decoration: none;
 }
 .icons p{
     margin: 0;
@@ -153,7 +164,7 @@ a{
     font-family: light;
     color: white;
     flex-direction: column;
-    margin-top: -50%;
+    margin-top: -40%;
 }
 #info{
     width: 4rem;
@@ -171,13 +182,13 @@ h3{
     text-align: center;
 }
 .paginacion{
+    position: absolute;
     position: fixed;
-    right: 5rem;   
+    right: 2rem;   
     bottom: 5rem;
     display: flex;
     border-radius: 10px;
     overflow: hidden;
-    backdrop-filter: blur(20px);
 }
 .paginacion button{
     color: white;
@@ -186,61 +197,71 @@ h3{
     border: none;
 }
 .paginacion button:hover{
-    background-color: #3340d6;
+    background-color: #191b3fdf;
 }
-@media (max-width:930px){
-    body{
+@media (max-width: 930px) {
+    body {
         width: 100%;
         height: auto;
-        overflow-y: scroll
+        overflow-y: scroll;
     }
-    #right{
+    #logotipo, img{
+        width: 10px;
+    }
+    #right, #import {
         width: 100%;
     }
-    #import{
-        width: 100%;
-    }
-    #all{
+    #all {
         flex-wrap: wrap;
+        width: 100%;
+        margin-top: -30%;
     }
-    .contenido{
-        margin: 4rem auto;
-        width: 80%;
+    .contenido {
+        font-size: 10px;
+        margin: 1rem auto;
+        width: 90%; 
+        flex-direction: column; 
     }
-    #informacion{
-        width: 10%;
+    #info {
+        width: 30%;
         height: 5%;
         margin: 0 auto;
-        display: flex;
-        flex-direction: row;
     }
-    .last_up{
+    .last_up {
+        margin: 0 auto;
+        width: 90%;
+    }
+    #left {
         margin: 0 auto;
         width: 80%;
     }
-    #left{
-        margin: 0 auto;
-        width: 80%;
-    }
-    #lanzamientos{
+    #lanzamientos {
         padding: 0;
-        width: 100%;
         margin: 0 auto;
     }
-    #details{
-        font-size: 1rem;
+    #details {
+        font-size: 0.8rem; 
         width: 80%;
-        padding: 1rem;
     }
-    .imagenes{
+    h4{
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        margin: 0 auto;
+    }
+    .imagenes {
         width: 100%;
         height: 35vw;
     }
-    .imagenes img{
+    .imagenes img {
         width: 40vw;
         height: 30vw;
     }
-    .botones{
-        width: 20rem;
+    .botones, .icons {
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        width: 70vw; 
+        margin-left: 0;
     }
 }
