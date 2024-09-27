@@ -111,10 +111,11 @@ h1{
     justify-content: space-evenly;
 }
 .descripcion{
+    background-color: #e52d2d;
     width: 15vw;
     height: 35rem;
     font-family: light;
-    overflow-y: scroll;
+    overflow: hidden;
 }
 .descripcion h2{
     font-family: regular;
@@ -134,81 +135,18 @@ h1{
     justify-content: space-evenly;
     flex-wrap: wrap;
     right: 0;
-    overflow-y: scroll;
-    overflow-x: hidden;
+    overflow: hidden;
+    background-color: #ffd733;
 }
 .estadisticas{
     width: 15vw;
     height: 35rem;
     font-family: light;
+    background-color: #298bfe;
 }
 h3{
     color: white;
     margin-top: 2rem;
-}
-.valores{
-    display: flex;
-    color: white;
-    position: relative;
-}
-.valores span{
-    position: absolute;
-    right: 0;
-    top: -20px;
-}
-progress{
-    width: 60%;
-}
-.parte1{
-    width: 20%;
-    height: 100%;
-    padding-bottom: 2rem;
-}
-.parte2{
-    width: 40%;
-    display: flex;
-    overflow-x: scroll;
-    gap: 1rem;
-    align-items: center;
-    height: 36rem;
-}
-.carousel__item{
-    margin-top: 15rem;
-}
-.carousel__item img{
-    min-width: 13rem;
-    width: 20vw;
-    border-radius: 10px;
-}
-.parte3{
-    width: 20%;
-    height: 100%;
-    padding-bottom: 2rem;
-}
-.item__progress__bar {
-    margin: 3rem auto;
-    color: var(--color--five);
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    background: radial-gradient(
-        closest-side, 
-        #1d1f38 85%, 
-        transparent 85% 100%), 
-        conic-gradient(var(--color--three) 
-        80%, 
-        transparent 0);  
-    transform: rotate(180deg); 
-  }
-.progress__value{
-    display: flex;
-    flex-direction: column;
-    transform: rotate(180deg); 
-    font-family: regular;
 }
 .info_rocket{
     font-family: regular;
@@ -231,28 +169,6 @@ progress{
     width: 50%;
     font-weight: 700;
     text-align: end;
-}
-.paginacion{
-    position: fixed;
-    right: 2rem;
-    bottom: 5rem;
-    display: flex;
-    border-radius: 10px;
-    overflow: hidden;
-    gap: 0px;
-    backdrop-filter: blur(20px);
-}
-.paginacion button{
-    background-color: inherit;
-    color: white;
-    padding: 0.5rem 0.7rem;
-    border: none;
-}
-.paginacion button:hover{
-    background-color: #191b3fdf;
-}
-#pag{
-    background-color: #14162C;
 }
 @media(max-width:880px){
     .info{
