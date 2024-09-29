@@ -1,0 +1,126 @@
+body {
+  background: linear-gradient(217deg, #13142D, rgba(255, 0, 0, 0) 100%),
+        linear-gradient(127deg, #13142D, #69AEFF 50.45%),
+        linear-gradient(127deg, #FFFFFF, #69AEFF 50.45%);
+  background-repeat: no-repeat;
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  overflow-x: hidden;
+  color: #ffffff;
+  overflow-y: hidden;
+}
+
+.principal {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20rem;
+  gap: 2rem;
+  margin-top: -10%;
+}
+
+h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #f4f4f4;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Efecto de sombra */
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+}
+
+.mensaje p {
+  text-align: justify;
+  max-width: 900px;
+  font-size: 1.25rem;
+  line-height: 1.7;
+  color: #e1e1e1;
+  margin-bottom: 1.5rem;
+}
+
+/* Imagen */
+.image img {
+  object-fit: cover; /* Ajusta la imagen al tamaño del contenedor */
+  border-radius: 30%;
+  max-width: 400px;
+  height: auto;
+  transition: transform 0.4s ease, box-shadow 0.4s ease; /* Animación en hover */
+}
+
+.image img:hover {
+  background-color: #215ea3;
+  transform: scale(1.05); /* Aumenta un poco el tamaño al pasar el mouse */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* Añade una sombra suave */
+}
+
+
+@media (max-width: 768px) {
+  body {
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+    margin: 0;
+    height: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .principal {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 1rem;
+      height: auto;
+      width: 100%;
+  }
+
+  h1 {
+      font-size: 1.5rem;
+  }
+
+  .mensaje p {
+      font-size: 0.9rem; 
+      max-width: 90%;
+  }
+
+  .image img {
+      max-width: 100%;
+      height: auto;
+      margin: 0 auto;
+      margin-top: 20px;
+      transform: scale(0.95); 
+      transition: transform 0.3s ease; 
+  }
+
+  .image img:hover {
+      transform: scale(0.90); 
+  }
+}
+
+
+button {
+  background-color: #1c87c9;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: #555;
+  color: white;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+}
