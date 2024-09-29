@@ -51,11 +51,11 @@ function god(){
     fetch("https://api.spacexdata.com/v4/rockets")
     .then(res => res.json())
     .then(info => {
-       largo_dato = info.length;
-       pg_actual();
-       document.querySelector(".nombre").innerHTML = `<h1>${info[nave].name}</h1>`
-       document.querySelector(".descripcion").innerHTML = `
-       <div class="seccion">
+        largo_dato = info.length;
+        pg_actual();
+        document.querySelector(".nombre").innerHTML = `<h1>${info[nave].name}</h1>`
+        document.querySelector(".descripcion").innerHTML = `
+        <div class="seccion">
             <img src="../img/icons/mech.svg" alt="">
             <div class="text">
                 <h2>${info[nave].country}</h2>
@@ -90,10 +90,10 @@ function god(){
                 <a href="${info[nave].wikipedia}" target="_blank" style = "color: white; text-decoration: none;">Wikipedia</a>
             </div>
         </div>
-       `;
-       let velocidadAtmosferica = parseInt((info[nave].engines.thrust_sea_level.kN/1780)*100)
-       document.querySelector(".info").innerHTML = `
-       <div class="parte1">
+        `;
+        let velocidadAtmosferica = parseInt((info[nave].engines.thrust_sea_level.kN/1780)*100)
+        document.querySelector(".info").innerHTML = `
+        <div class="parte1">
             <div class="item__progress__bar"
                 style="background: radial-gradient(closest-side, #1d1f38 85%, transparent 85% 100%), conic-gradient(var(--color--three) ${velocidadAtmosferica}%, transparent 0);">
                 <div class="progress__value"><strong>Atmospheric acceleration</strong><small>${velocidadAtmosferica}
