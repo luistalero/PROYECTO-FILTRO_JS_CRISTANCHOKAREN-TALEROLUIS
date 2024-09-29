@@ -47,13 +47,13 @@ class btn extends HTMLElement {
         this.innerHTML = `
         <div class="botones">
             <button class="icons">
-                <a href="../ROKETS/index.html">
+                <a href="../ROCKETS/index.html">
                     <img src="../imagen/rocket.svg" alt="">
                     <p>Rockets</p>
                 </a>
             </button>
             <button class="icons">
-                <a href="../CAPSULES/inde.html">
+                <a href="../capsule/inde.html">
                     <img src="../imagen/capsule.svg" alt="">
                     <p>Capsules</p>
                 </a>
@@ -64,8 +64,11 @@ class btn extends HTMLElement {
                     <p>Company</p>
                 </a>
             </button>
-            <button class="icons actual"><img src="../imagen/prop.svg" alt="">
-                <p>History</p>
+            <button class="icons actual">
+                <a href="../History/index.html">
+                    <img src="../imagen/prop.svg" alt="">
+                    <p>History</p>
+                </a>
             </button>
         </div>
         `;
