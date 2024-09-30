@@ -28,21 +28,23 @@ function god(){
                 <div>
                     <h2>OFFICIAL SITES</h2>
                 </div>
-                <div class="section_1">
-                    <h3>WEBSITES</h3>
-                    <a href="${info.links.website}" target="_blank">SPACEX</a>
-                </div>
-                <div class="section_2">
-                    <h3>FLICKR</h3>
-                    <a href="${info.links.flickr}" target="_blank">FLICKR</a>
-                </div>
-                <div class="section_3">
-                    <h3>TWITTER</h3>
-                    <a href="${info.links.twitter}" target="_blank">OFFICIAL_TWITTER</a>
-                </div>
-                <div class="section_4">
-                    <h3>FOUNDER_TWITTER</h3>
-                    <a href="${info.links.elon_twitter}" target="_blank">FOUNDER_TWITTER</a>
+                <div class="secciones">
+                    <div class="section_1">
+                        <h3>WEBSITES</h3>
+                        <a href="${info.links.website}" target="_blank">SPACEX</a>
+                    </div>
+                    <div class="section_2">
+                        <h3>FLICKR</h3>
+                        <a href="${info.links.flickr}" target="_blank">FLICKR</a>
+                    </div>
+                    <div class="section_3">
+                        <h3>TWITTER</h3>
+                        <a href="${info.links.twitter}" target="_blank">OFFICIAL_TWITTER</a>
+                    </div>
+                    <div class="section_4">
+                        <h3>FOUNDER_TWITTER</h3>
+                        <a href="${info.links.elon_twitter}" target="_blank">FOUNDER_TWITTER</a>
+                    </div>
                 </div>
             </div> 
         `;
@@ -54,29 +56,29 @@ function god(){
                     <div class="found">
                         <div>   
                             <div class="musk">
-                                <h3>FOUNDER</h3>
+                                <h4>FOUNDER</h4>
                                 <p>${info.founder}</p>
                             </div>
                             <div class="musk">
-                                <h3>FOUNDED</h3>
+                                <h4>FOUNDED</h4>
                                 <p>${info.founded}</p>
                             </div>
                             <div class="musk">
-                                <h3>CEO</h3>
+                                <h4>CEO</h4>
                                 <p>${info.ceo}</p>
                             </div>
                         </div>
                         <div>
                             <div class="musk">
-                                <h3>CTO</h3>
+                                <h4>CTO</h4>
                                 <p>${info.cto}</p>
                             </div>
                             <div class="musk">
-                                <h3>COO</h3>
+                                <h4>COO</h4>
                                 <p>${info.coo}</p>
                             </div>
                             <div class="musk">
-                                <h3>CTO_PROPULSION</h3>
+                                <h4>CTO_PROPULSION</h4>
                                 <p>${info.cto_propulsion}</p>
                             </div>
                         </div>
