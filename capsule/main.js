@@ -62,7 +62,7 @@ function capsule() {
         // Inserta la última actualización de la cápsula en el HTML
         document.querySelector(".last_up").innerHTML = `
             <h4>Last Update :</h4>
-            <p>${cap[cohete].last_update}</p>
+            <p class="texto">${cap[cohete].last_update}</p>
         `;  // Muestra la última actualización de la cápsula
 
         let numero = 0;  // Inicializa un contador para los lanzamientos
