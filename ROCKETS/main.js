@@ -14,14 +14,18 @@ function pg_actual(){
 function change(){
     let numeros = document.querySelectorAll(".numero");
     numeros.forEach(e => {
-        e.addEventListener("click", () => {
-            nave = parseInt(e.getAttribute("data-id")) - 1;
-            if (nave >= 0 && nave < largo_dato) {
-                god()
-            }
-        });
+        e.removeEventListener("click", handlePageClick);
+        e.addEventListener("click", handlePageClick);
     });
 }
+
+function handlePageClick(event) {
+    nave = parseInt(event.target.getAttribute("data-id")) - 1;
+    if (nave >= 0 && nave < largo_dato) {
+        god();
+    }
+}
+
 function siguiente(){
     let numeros = document.querySelectorAll(".numero");
     let contar = Number(numeros[0].getAttribute("data-id"));
@@ -31,6 +35,7 @@ function siguiente(){
             numeros[a].setAttribute("data-id", contar + a);
             numeros[a].innerHTML = contar + a;
         }
+        nave = contar - 1;
     }
     pg_actual();
 }
@@ -44,9 +49,13 @@ function anterior(){
             numeros[a].setAttribute("data-id", contar + a);
             numeros[a].innerHTML = contar + a;
         }
+        nave = contar - 1;
     }
     pg_actual();
 }
+
+change();
+
 function god(){
     fetch("https://api.spacexdata.com/v4/rockets")
     .then(res => res.json())

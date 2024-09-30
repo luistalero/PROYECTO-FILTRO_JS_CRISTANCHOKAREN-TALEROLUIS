@@ -53,10 +53,16 @@ class btn extends HTMLElement {
                 </a>
             </button>
             <button class="icons">
-                <a href="../capsule/inde.html">
+                <a href="../capsule/index.html">
                     <img src="../imagen/capsule.svg" alt="">
                     <p>Capsules</p>
                 </a>
+            </button>
+            <button class="icons">
+            <a href="../index.html">
+                <img src="../img/icons/casa-icono-silueta.png" alt="" >
+                <p>Home</p>
+            </a>
             </button>
             <button class="icons">
                 <a href="../COMPANY/index.html">
