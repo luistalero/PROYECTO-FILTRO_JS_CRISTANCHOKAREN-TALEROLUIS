@@ -4,29 +4,158 @@
     box-sizing: border-box;
 }
 
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
-body{
-    flex-wrap: wrap;
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f0f4f8;
+    color: #333;
+    display: flex;
+    flex-direction: column;
     min-height: 100vh;
-    width: 100vw;
-    overflow-x: hidden;
-    background: linear-gradient(217deg, #13142D, rgba(255, 0, 0, 0) 100%),
-        linear-gradient(127deg, #13142D, #69AEFF 50.45%),
-        linear-gradient(127deg, #FFFFFF, #69AEFF 50.45%);
+    margin: 0;
+    padding: 0;
+    
 }
 
-*::-webkit-scrollbar {
-    color: transparent;
-    cursor: pointer;
+#top {
+    background: linear-gradient(217deg, #13142D, rgba(255, 0, 0, 0) 100%),
+      linear-gradient(127deg, #13142D, #69AEFF 50.45%),
+      linear-gradient(127deg, #FFFFFF, #69AEFF 50.45%);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+}
+
+#logotipo img {
+    max-width: 150px;
+    height: auto;
+}
+
+.last_up {
+    font-size: 0.9rem;
+}
+
+#all {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#left {
+    width: 25%;
+    background-color: #ffffff;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-right: 2rem;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    max-height: 80vh;
+}
+
+#lanzamientos {
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+}
+
+#logo_name {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+#logo img {
+    max-width: 50px;
+    margin-right: 1rem;
+}
+
+#name {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+#pictures {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+#pictures img {
+    width: 100px;
+    height: 100px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.contenido {
+    flex-grow: 1;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#info {
+    display: inline-block;
+    width: 48%;
+    margin: 1%;
+    text-align: center;
+}
+
+#info h3 {
+    color: #032d5e;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+#info .conte {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.reuse {
+    background: linear-gradient(217deg, #13142D, rgba(255, 0, 0, 0) 100%),
+      linear-gradient(127deg, #13142D, #69AEFF 50.45%),
+      linear-gradient(127deg, #FFFFFF, #69AEFF 50.45%);
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.water, .land {
+    background-color: #f5f5f5;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.paginacion {
+    display: flex;
+    justify-content: flex-end; /* Alinear a la derecha */
+    align-items: center;
+    margin: 1rem 0;
+    gap: 0.5rem;
+    margin-top: -5%;
+}
+
+.paginacion button {
+    color: white;
+    padding: 0.5rem 0.7rem;
+    background-color: #032d5e;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.paginacion button:hover {
+    background-color: #051a3a;
 }
 
 .botones {
-    position: fixed;
+    position: relative;
     display: flex;
     background-color: #032d5e;
     bottom: 0;
@@ -77,191 +206,44 @@ body{
     height: 4%;
     background-color: white;
 }
-#all{
-    margin-bottom: 10rem;
-    min-height: 100vh;
-}
-#top{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-}
-#top div{
-    padding: 2rem 1rem;
-}
-#logotipo img{
-    margin-top: -30%;
-    width: 25rem;
-}
-.last_up{
-    margin-right: 7rem;
-    color: white;
-    font-family: regular;
-    font-size: clamp(1rem, 3vw, 1.2rem);
-}
-#left{
-    border-radius: 20px;
-    margin: 0 auto;
-    width: 50%;
-    border: 1px solid white;
-    overflow-x: auto;
-    display: flex;
-}
-#lanzamientos{
-    min-width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0 auto;
-}
-#logo_name{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 2rem;
-    height: 5rem;
-    width: 100%;
-    margin-top: 1rem;
-}
-#name{
-    color: white;
-    font-size: clamp(1.5rem, 4vw, 2rem);
-    font-family: bold;
-}
-#logo img{
-    width: 6rem;
-}
-.details{
-    margin: 0 auto;
-    font-family: light;
-    font-size: 1.3rem;
-    color: white;
-    padding: 2rem;
-    width: 45rem;
-}
-#pictures{
-    width: 40%;
-    margin: 2rem auto;
-    border-radius: 40px;
-}
 
-.imagenes{
-    width: 20vw;
-    height: 20vw;
-    display: flex;
-    overflow-x: scroll;
-    gap: 1rem;
-    align-items: center;
-}
-.imagenes img{
-    border-radius: 10px;
-    width: 20vw;
-    height: 15vw;
-}
-.contenido{
-    margin: 2rem auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
-    font-family: light;
-    color: white;
-}
-#info{
-    width: 4rem;
-    border: #ffffff solid;
-    height: 4rem;
-    border-radius: 20px;
-    gap: 2rem;
-    margin-top: 2rem;
-}
-p.conte{
-    text-align: center;
-    margin: 1.5rem 0;
-}
-h3{
-    text-align: center;
-    font-family: bold;
-}
-.paginacion{
-    position: fixed;
-    right: 5rem;   
-    bottom: 5rem;
-    display: flex;
-    border-radius: 10px;
-    overflow: hidden;
-    backdrop-filter: blur(20px);
-}
-.paginacion button{
-    color: white;
-    padding: 0.5rem 0.7rem;
-    background-color: inherit;
-    border: none;
-}
-.paginacion button:hover{
-    background-color: #14162C;
-}
-@media (max-width:930px){
-    body{
-        width: 100%;
-        height: auto;
-        overflow-y: scroll
-    }
-    #right{
-        width: 100%;
-    }
-    #import{
-        width: 100%;
-    }
-    #all{
-        flex-wrap: wrap;
-    }
-    .contenido{
-        margin: 4rem auto;
-        width: 80%;
-    }
-    #information{
-        width: 80%;
-        margin: 4rem auto;
-    }
-    .last_up{
-        margin: 0 auto;
-        width: 80%;
-    }
-    #left{
-        margin: 0 auto;
-        width: 80%;
-    }
-    #lanzamientos{
-        padding: 0;
-        width: 100%;
-        margin: 0 auto;
-    }
-    #details{
-        font-size: 1rem;
-        width: 80%;
+@media (max-width: 768px) {
+    #all {
+        flex-direction: column; 
         padding: 1rem;
     }
-    .imagenes{
+
+    #left {
+        margin-right: 0; 
+        margin-bottom: 1rem; 
         width: 100%;
-        height: 35vw;
-    }
-    .imagenes img{
-        width: 40vw;
-        height: 30vw;
-    }
-    .botones{
-        width: 20rem;
     }
 
-    h4, p.texto{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 0 auto;
-        margin-left: -120vw;
-        margin-top: 25px;
+    #pictures img {
+        width: 50px;
+        height: 50px;
     }
-    .paginacion{
-        margin-left: -50vw;
+
+    h3, .conte {
+        font-size: 0.5rem;
+    }
+    .texto{
+        font-size: 0.70rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #pictures img {
+        width: 30px;
+        height: 30px;
+    }
+    
+    p {
+        font-size: 0.70rem;
+    }
+
+    #top {
+        flex-direction: column;
+        align-items: flex-start;
     }
 }
