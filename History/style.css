@@ -204,12 +204,14 @@ h2 {
 
 @media(max-width:700px) {
     .botones {
-        width: 20rem;
+        width: 100vw;
+        height: 3rem;
     }
 }
 
 @media(max-width:685px) {
     .center {
-        width: 100%;
+        width: 100vw;
+        height: 3rem;
     }
 }

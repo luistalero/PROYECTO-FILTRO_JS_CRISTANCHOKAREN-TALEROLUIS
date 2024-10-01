@@ -1,9 +1,14 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
-
+html{
+    display: grid;
+    place-items: center;
+}   
 body {
     font-family: 'Open Sans', sans-serif;
     background: linear-gradient(217deg, #13142D, rgba(255, 0, 0, 0) 100%),
@@ -13,12 +18,13 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    place-items: center;
+    overflow: hidden;
 }
 
 .principal {
     max-width: 1200px;
-    margin: 2rem auto; /* Espaciado horizontal */
-    padding: 2rem;
+    margin: 2rem; /* Espaciado horizontal */
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
 }
@@ -34,9 +40,8 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
 }
-
 .descripcion,
 .info {
     padding: 1.5rem;
@@ -45,6 +50,7 @@ body {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
     background-color: rgba(105, 174, 255, 0.15); /* Fondo azul suave */
     transition: background-color 0.3s; /* Efecto hover */
+    height: 57vh;
 }
 
 .descripcion:hover,
@@ -75,10 +81,11 @@ h4 {
 }
 
 .estadisticas {
-    padding: 2rem;
+    padding: 1rem;
     border-radius: 10px;
     margin-bottom: 2rem;
     background-color: rgba(105, 174, 255, 0.15); /* Fondo azul suave */
+    height: 15vh;
 }
 
 .seccion {
@@ -118,12 +125,13 @@ h4 {
 }
 
 .elonk {
-    padding: 1.5rem;
+    padding: 1rem;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     background-color: rgba(105, 174, 255, 0.15); /* Fondo azul suave */
     transition: background-color 0.3s; /* Efecto hover */
+    height: 30vh;
 }
 
 .elonk:hover {
@@ -143,17 +151,18 @@ h4 {
 }
 
 .musk {
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
+    height: 4vh;
 }
 
 .musk h4 {
-    font-size: 1.1rem; 
+    font-size: 0.9rem; 
     color: white;
     margin-bottom: 0.5rem;
 }
 
 .musk p {
-    font-size: 0.9rem; 
+    font-size: 0.7rem; 
     color: #333;
 }
 
@@ -166,6 +175,7 @@ h4 {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     background-color: rgba(105, 174, 255, 0.15); /* Fondo azul suave */
     transition: background-color 0.3s; /* Efecto hover */
+    height: 17vh;
 }
 
 .empresa:hover {
@@ -182,12 +192,12 @@ h4 {
 }
 
 .back h3 {
-    font-size: 1.5rem; 
+    font-size: 1rem; 
     color: #032d5e;
 }
 
 .back p {
-    font-size: 0.9rem; 
+    font-size: 0.8rem; 
     line-height: 1.5;
     color: black;
 }
@@ -242,20 +252,120 @@ h4 {
     height: 4%;
     background-color: white;
 }
+.iconsR {
+    display: inline-flex;
+}   
+.iconsR a{
+    margin: 0 25px;
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    position: relative;
+}   
+.iconsR a .layer{
+    width: 50px;
+    height: 40px;
+    transition: transform 0.3s;
+}   
+.iconsR a:hover .layer{
+    transform: rotate(-35deg) skew(20deg);
+}   
+.iconsR a .layer span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    transition: all 0.3s;
+}   
+.iconsR a .layer span.fab{
+    font-size: 30px;
+    line-height: 55px;
+    text-align: center;
+}   
+.iconsR a:hover .layer span:nth-child(1){
+    opacity: 0.2;
+}   
+.iconsR a:hover .layer span:nth-child(2){
+    opacity: 0.4;
+    transform: translate(5px, -5px);
+}   
+.iconsR a:hover .layer span:nth-child(3){
+    opacity: 0.6;
+    transform: translate(10px, -10px);
+}   
+.iconsR a:hover .layer span:nth-child(4){
+    opacity: 0.8;
+    transform: translate(15px, -15px);
+}   
+.iconsR a:hover .layer span:nth-child(5){
+    opacity: 1;
+    transform: translate(20px, -20px);
+}   
+.iconsR a:nth-child(1) .layer span,
+.iconsR a:nth-child(1) .text{
+    color: #000000;
+    border-color: #2a362b;
+}   
+.iconsR a:nth-child(2) .layer span,
+.iconsR a:nth-child(2) .text{
+    color: #211df2;
+    border-color: #1d288b;
+}   
+.iconsR a:nth-child(3) .layer span,
+.iconsR a:nth-child(3) .text{
+    color: #ffffff;
+    border-color: #b4b1b2;
+}   
+.iconsR a:nth-child(4) .layer span,
+.iconsR a:nth-child(4) .text{
+    color: #ce602d;
+    border-color: #2867B2;
+}   
+.iconsR a:hover:nth-child(1) .layer span{
+    box-shadow: -1px 1px 3px #bfc9db;
+}   
+.iconsR a:hover:nth-child(2) .layer span{
+    box-shadow: -1px 1px 3px #0a2a58;
+}   
+.iconsR a:hover:nth-child(3) .layer span{
+    box-shadow: -1px 1px 3px #E1306C;
+}   
+.iconsR a:hover:nth-child(4) .layer span{
+    box-shadow: -1px 1px 3px #ce602d;
+}   
+.iconsR a .text{
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    opacity: 0;
+    font-weight: 500;
+    transform: translateX(-50%);
+    transition: bottom 0.3s ease, opacity 0.3s ease;
+}   
+.iconsR a:hover .text{
+    bottom: -35px;
+    opacity: 1;
+}
 
 @media (max-width: 768px) {
+    body {
+        overflow-y: scroll;
+    }
     .titulo {
         flex-direction: column;
     }
 
     .estadisticas,
-    .elonk,
-    .empresa {
+    .elonk{
         padding: 1rem;
     }
 
     .botones {
         height: 4rem;
+        margin-right: 50px;
     }
 
     .icons {
@@ -265,9 +375,16 @@ h4 {
     .icons img {
         width: 40%;
     }
+    .empresa {
+        padding: 1rem;
+        height: 50vh;
+    } 
 }
 
 @media (max-width: 480px) {
+    body {
+        overflow-y: scroll;
+    }
     .nombre h1 {
         font-size: 1.5rem; 
     }
@@ -286,6 +403,7 @@ h4 {
 
     .botones {
         height: 3.5rem;
+        width: 100vw;
     }
 
     .icons img {

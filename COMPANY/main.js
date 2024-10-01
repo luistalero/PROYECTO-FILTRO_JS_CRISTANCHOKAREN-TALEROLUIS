@@ -2,7 +2,6 @@ function god(){
     fetch("https://api.spacexdata.com/v4/company")
     .then(res => res.json())
     .then(info => {
-        console.log(info);
         document.querySelector(".nombre").innerHTML = `<h1>${info.name}</h1>`
         document.querySelector(".descripcion").innerHTML = `
             <div class="seccion">
@@ -29,21 +28,47 @@ function god(){
                     <h2>OFFICIAL SITES</h2>
                 </div>
                 <div class="secciones">
-                    <div class="section_1">
-                        <h3>WEBSITES</h3>
-                        <a href="${info.links.website}" target="_blank">SPACEX</a>
-                    </div>
-                    <div class="section_2">
-                        <h3>FLICKR</h3>
-                        <a href="${info.links.flickr}" target="_blank">FLICKR</a>
-                    </div>
-                    <div class="section_3">
-                        <h3>TWITTER</h3>
-                        <a href="${info.links.twitter}" target="_blank">OFFICIAL_TWITTER</a>
-                    </div>
-                    <div class="section_4">
-                        <h3>FOUNDER_TWITTER</h3>
-                        <a href="${info.links.elon_twitter}" target="_blank">FOUNDER_TWITTER</a>
+                    <div class="iconsR">
+                        <a href="${info.links.elon_twitter}" target="_blank">
+                            <div class="layer">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span class="fab fa-facebook-f"><img src="../img/icons/nuevo-diseno-icono-x-logotipo-twitter-2023_1017-45418.avif" alt=""  width="100%" height="100%"></span>
+                            </div>
+                            <div class="text">Twitter_Elon</div>
+                        </a>
+                        <a href="${info.links.twitter}" target="_blank">
+                            <div class="layer">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span class="fab fa-twitter"><img src="../img/icons/nuevo-diseno-icono-x-logotipo-twitter-2023_1017-45418.avif" alt=""  width="100%" height="100%"></span>
+                            </div>
+                            <div class="text">Twitter_SpaceX</div>
+                        </a>
+                        <a href="${info.links.flickr}"  target="_blank">
+                            <div class="layer">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span class="fab fa-instagram"><img src="../img/icons/flickr-icon-2048x2048-hnj8uvzi.png" alt=""  width="100%" height="100%"></span>
+                            </div>
+                            <div class="text">Flickr</div>
+                        </a>
+                        <a href="${info.links.website}"  target="_blank">
+                            <div class="layer">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span class="fab fa-linkedin-in"><img src="../img/icons/SpaceX-White-Dark-Background-Logo.wine.svg" alt=""  width="100%" height="100%"></span>
+                            </div>
+                            <div class="text">spaceX</div>
+                        </a>
                     </div>
                 </div>
             </div> 
