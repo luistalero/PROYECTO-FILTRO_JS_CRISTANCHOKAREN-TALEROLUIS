@@ -1,60 +1,199 @@
-@font-face{
-    src: url(../Fuentes/Roboto/Roboto-Light.ttf);
-    font-family: light;
-}
-@font-face{
-    src: url(../Fuentes/Roboto/Roboto-Regular.ttf);
-    font-family: regular;
-}
-:root{
-    --color--one: #14162C;
-    --color--one--rgba: #191b3fdf;
-    --color--two: #cfcfd1;
-    --color--three: #298bfe;
-    --color--four: #e52d2d;
-    --color--five: #ffffff;
-    --color--six: #ffd733;
-
-    --layout-description-container-x: 10px;
-    --layout-description-container-y: 10px;
-}
-
-*{
+* {
+    padding: 0;
     margin: 0;
-    padding: 0%;
     box-sizing: border-box;
 }
-*::-webkit-scrollbar {
-    height: 12px;
-    width: 10px;
-}
 
-*::-webkit-scrollbar-track {
-    background-color: var(--color--five);
-}
-
-*::-webkit-scrollbar-track:hover,
-*::-webkit-scrollbar-thumb:hover {
-    cursor: pointer;
-}
-
-*::-webkit-scrollbar-thumb {
-
-    border: 1px solid var(--color--five);
-    background-color: var(--color--one--rgba);
-}
-body{
-    overflow: hidden;
+body {
+    font-family: 'Open Sans', sans-serif;
     background: linear-gradient(217deg, #13142D, rgba(255, 0, 0, 0) 100%),
         linear-gradient(127deg, #13142D, #69AEFF 50.45%),
         linear-gradient(127deg, #FFFFFF, #69AEFF 50.45%);
-    width: 100vw;
+    color: #333;
+    display: flex;
+    flex-direction: column;
     min-height: 100vh;
-    background-size: contain;
-    
 }
-.botones{
-    position: fixed;
+
+.principal {
+    max-width: 1200px;
+    margin: 2rem auto; /* Espaciado horizontal */
+    padding: 2rem;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+.nombre h1 {
+    font-size: 2rem; 
+    color: white;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.titulo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+}
+
+.descripcion,
+.info {
+    padding: 1.5rem;
+    margin: 0.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    background-color: rgba(105, 174, 255, 0.15); /* Fondo azul suave */
+    transition: background-color 0.3s; /* Efecto hover */
+}
+
+.descripcion:hover,
+.info:hover {
+    background-color: rgba(105, 174, 255, 0.3); /* Efecto hover más intenso */
+}
+
+.info {
+    flex: 1;
+}
+
+.descripcion h2,
+.info h2 {
+    font-size: 1.5rem; 
+    color: white;
+    margin-bottom: 0.75rem;
+}
+
+.descripcion p,
+.info p {
+    font-size: 0.9rem; 
+    line-height: 1.6;
+    color: #666;
+}
+
+h4 {
+    font-size: 0.7rem; 
+}
+
+.estadisticas {
+    padding: 2rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    background-color: rgba(105, 174, 255, 0.15); /* Fondo azul suave */
+}
+
+.seccion {
+    margin-bottom: 1.5rem;
+}
+
+.seccion h2 {
+    font-size: 1.5rem; 
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.secciones {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.secciones div {
+    margin-bottom: 1rem;
+}
+
+.seccion h3 {
+    font-size: 1.2rem; 
+    color: white;
+}
+
+.seccion a {
+    color: #032d5e;
+    text-decoration: none;
+    font-size: 0.9rem; 
+    transition: color 0.3s;
+}
+
+.seccion a:hover {
+    color: #69AEFF;
+}
+
+.elonk {
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+    background-color: rgba(105, 174, 255, 0.15); /* Fondo azul suave */
+    transition: background-color 0.3s; /* Efecto hover */
+}
+
+.elonk:hover {
+    background-color: rgba(105, 174, 255, 0.3); /* Efecto hover más intenso */
+}
+
+.elonk img {
+    max-width: 100px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.found {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.musk {
+    margin-bottom: 1rem;
+}
+
+.musk h4 {
+    font-size: 1.1rem; 
+    color: white;
+    margin-bottom: 0.5rem;
+}
+
+.musk p {
+    font-size: 0.9rem; 
+    color: #333;
+}
+
+.empresa {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: rgba(105, 174, 255, 0.15); /* Fondo azul suave */
+    transition: background-color 0.3s; /* Efecto hover */
+}
+
+.empresa:hover {
+    background-color: rgba(105, 174, 255, 0.3); /* Efecto hover más intenso */
+}
+
+.empresa img {
+    max-width: 150px;
+    border-radius: 8px;
+}
+
+.back {
+    padding-left: 1.5rem;
+}
+
+.back h3 {
+    font-size: 1.5rem; 
+    color: #032d5e;
+}
+
+.back p {
+    font-size: 0.9rem; 
+    line-height: 1.5;
+    color: black;
+}
+
+.botones {
+    position: relative;
     display: flex;
     background-color: #032d5e;
     bottom: 0;
@@ -63,33 +202,37 @@ body{
     justify-content: space-evenly;
     left: 50%;
     transform: translateX(-50%);
-    font-family: light;
     clip-path: polygon(6% 0, 94% 0, 100% 100%, 0% 100%);
     padding: 0 4%;
 }
-.icons{
+
+.icons {
     width: 10%;
-    margin-top: 0%;
     background-color: inherit;
     border: none;
     cursor: pointer;
     position: relative;
 }
-.icons a{
+
+.icons img {
+    width: 30%;
+}
+
+.icons a {
     text-decoration: none;
 }
-.icons p{
+
+.icons p {
     margin: 0;
     text-align: center;
     color: white;
 }
-.nombre {
-    padding: 0 0 20px 0;
-}
-.actual{
+
+.actual {
     margin: 0;
 }
-.actual::after{
+
+.actual::after {
     position: absolute;
     content: '';
     width: 100%;
@@ -99,281 +242,57 @@ body{
     height: 4%;
     background-color: white;
 }
-a {
-    text-decoration: none;
-    color: #FFFFFF;
-}
-h1{
-    text-align: center;
-    font-family: regular;
-    color: white;
-}
-h2{
-    text-align: center;
-    font-family: regular;
-    color: white;
-}
-h3{
-    color: white;
-    margin-top: 2rem;
-}
-h4{
-    color: white;
-    margin-top: 2rem;
-}
-.titulo{
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-}
-.descripcion{
-    width: 15vw;
-    height: 35rem;
-    font-family: light;
-    overflow: hidden;
-}
-.descripcion h2{
-    font-family: regular;
-}
-.seccion{
-    margin-top: 1rem;
-    color: white;
-}
-.secciones {
-    display: flex;
-    justify-content: space-evenly;
-}
-.info {
-    display: flex;
-    width: 75vw;
-    height: 30vw;
-    border: 1px solid white;
-    min-width: 40rem;
-    right: 0;
-    overflow: hidden;
-}
-.estadisticas{
-    width: 100vw;
-    height: 35rem;
-    font-family: light;
-}
-.elonk {
-    width: 100%;
-    height: 70%;
-}
-.elonk img {
-    width: 300px;
-    height: 200px;
-}
-.info_elon {
-    display: flex;
-    flex-direction: column;
-    margin-left: 20px;
-}
-.found {
-    display: flex;
-    margin-left: 10px;
-}
-.found div {
-    margin-left: 20px;
-}
-.empresa {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 300px;
-}
-.empresa img {
-    width: 300px;
-    height: 200px;
-}
-.otro {
-    width: 100%;
-    height: 70%;
-}
-.back {
-    margin-left: 20px;
-}
-@media(max-width:880px){
-    body{
-        overflow: hidden;
-        background: linear-gradient(217deg, #13142D, rgba(255, 0, 0, 0) 100%),
-            linear-gradient(127deg, #13142D, #69AEFF 50.45%),
-            linear-gradient(127deg, #FFFFFF, #69AEFF 50.45%);
-        width: 100vw;
-        min-height: 100vh;
-        background-size: contain;
-        
-    }
-    .botones{
-        position: fixed;
-        display: flex;
-        background-color: #132131;
-        bottom: 0;
-        width: 100vw;
-        height: 5rem;
-        justify-content: space-evenly;
-        left: 50%;
-        transform: translateX(-50%);
-        font-family: light;
-        clip-path: polygon(6% 0, 94% 0, 100% 100%, 0% 100%);
-        padding: 0 4%;
-    }
-    .icons{
-        width: 10%;
-        margin-top: 0%;
-        background-color: inherit;
-        border: none;
-        cursor: pointer;
-        position: relative;
-    }
-    .icons a{
-        text-decoration: none;
-    }
-    .icons p{
-        margin: 0;
-        text-align: center;
-        color: white;
-    }
-    .actual{
-        margin: 0;
-    }
-    .actual::after{
-        position: absolute;
-        content: '';
-        width: 100%;
-        left: 0;
-        bottom: 8%;
-        border-radius: 2px;
-        height: 4%;
-        background-color: white;
-    }
-    a {
-        text-decoration: none;
-        color: #FFFFFF;
-    }
-    h1{
-        text-align: center;
-        font-family: regular;
-        color: white;
-    }
-    h2{
-        text-align: center;
-        font-family: regular;
-        color: white;
-    }
-    h3{
-        color: white;
-        margin-top: 2rem;
-    }
-    .titulo{
-        width: 100%;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-    }
-    .descripcion{
-        width: 70vw;
-        height: 30vh;
-        font-family: light;
-        overflow: hidden;
-    }
-    .descripcion h2{
-        font-family: regular;
-    }
-    .seccion{
-        margin-top: 1rem;
-        color: white;
-    }
-    
-    .info{
-        width: 60vw;
-        height: 50vw;
-        border: 1px solid white;
-        min-width: 40rem;
-        right: 0;
-        overflow-y: scroll;
-        overflow-x: hidden;
-    }
-    .estadisticas{
-        width: 70vw;
-        height: 35rem;
-        margin-top: 10vh;
-        font-family: light;
-    }
-    .elonk {
-        width: 90%;
-        height: 70%;
-    }
-    .elonk img {
-        width: 400px;
-        height: 300px;
-    }
-    .info_elon {
-        display: flex;
+
+@media (max-width: 768px) {
+    .titulo {
         flex-direction: column;
-        margin-left: 20px;
-        height: 30vh;
     }
-    .found {
-        display: flex;
-        margin-left: 20px;
-    }
-    .found div {
-        margin-left: 20px;
-    }
+
+    .estadisticas,
+    .elonk,
     .empresa {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        height: 20vh;
+        padding: 1rem;
     }
-    .empresa img {
-        margin-left: 20px;
-        width: 400px;
-        height: 300px;
+
+    .botones {
+        height: 4rem;
     }
-    .otro {
-        width: 100vw;
-        height: 70vh;
+
+    .icons {
+        width: 15%;
     }
-    .otro h2 {
-        margin-top: 20vh;
-    }
-    .back {
-        margin-left: 20px;
-        width: 80vw;
-        height: 20vh;
+
+    .icons img {
+        width: 40%;
     }
 }
-@media(max-width:700px){
-    .titulo{
-        display: block;
+
+@media (max-width: 480px) {
+    .nombre h1 {
+        font-size: 1.5rem; 
     }
-    .descripcion{
-        margin: 0 auto;
-        height: 25rem;
+
+    .descripcion,
+    .info {
+        padding: 0.5rem;
+        margin: 0.5rem 0; 
     }
-    .info{
-        min-width: 15rem;
-        flex-direction: column;
-        margin: 2rem auto;
+
+    .estadisticas,
+    .elonk,
+    .empresa {
+        padding: 0.5rem;
     }
-    .parte1,.parte2,.parte3{
-        margin: 0 auto ;
-        width: 90%;
+
+    .botones {
+        height: 3.5rem;
     }
-    .parte2{
-        height: 14rem;
+
+    .icons img {
+        width: 30%;
     }
-    .carousel__item{
-        margin-top: 3rem;
-    }
-    .estadisticas{
-        margin: 3rem auto;
-    }
-    .botones{
-        width: 20rem;
+
+    .icons p {
+        font-size: 0.8rem; 
     }
 }
