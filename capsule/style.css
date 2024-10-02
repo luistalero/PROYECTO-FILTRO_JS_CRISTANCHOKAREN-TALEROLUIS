@@ -56,6 +56,9 @@ body{
 .icons img{
     width: 30%;
 }
+.icons a {
+    text-decoration: none;
+}
 .icons p{
     margin: 0;
     text-align: center;
@@ -202,6 +205,7 @@ h3{
 .paginacion button:hover{
     background-color: #14162C;
 }
+
 @media (max-width:930px){
     body{
         width: 100%;
