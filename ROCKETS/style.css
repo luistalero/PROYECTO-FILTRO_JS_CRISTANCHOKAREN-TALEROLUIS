@@ -44,14 +44,14 @@
     background-color: var(--color--one--rgba);
 }
 body{
-    overflow-x: hidden;
+    overflow: scroll;
     background: linear-gradient(217deg, #13142D, rgba(255, 0, 0, 0) 100%),
         linear-gradient(127deg, #13142D, #69AEFF 50.45%),
         linear-gradient(127deg, #FFFFFF, #69AEFF 50.45%);
     width: 100vw;
     min-height: 100vh;
     background-size: contain;
-    
+    font-family: 'Roboto', sans-serif;
 }
 .botones{
     position: fixed;
@@ -68,7 +68,7 @@ body{
     padding: 0 4%;
 }
 .icons{
-    width: 10%;
+    width: 15%;
     margin-top: 0%;
     background-color: inherit;
     border: none;
@@ -114,7 +114,7 @@ h1{
     width: 15vw;
     height: 70vh;
     font-family: light;
-    overflow-y: scroll;
+    overflow-y: hidden;
 }
 .descripcion h2{
     font-family: regular;
@@ -239,7 +239,6 @@ progress{
     bottom: 5rem;
     display: flex;
     border-radius: 10px;
-    overflow: hidden;
     gap: 0px;
     backdrop-filter: blur(20px);
 }
@@ -267,7 +266,7 @@ progress{
     .botones{
         position: fixed;
         display: flex;
-        background-color: #132131;
+        background-color: #032d5e;
         bottom: 0;
         width: 100vw;
         height: 5vh;

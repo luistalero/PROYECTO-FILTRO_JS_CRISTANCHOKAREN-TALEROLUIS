@@ -56,7 +56,7 @@ function capsule() {
                 <div id="info" class="land"><p class="conte">${cap[cohete].land_landings}</p><h3>Land Landings</h3></div>
                 <div id="info" class="serial"><p class="conte">${cap[cohete].serial}</p><h3>Serial</h3></div>
                 <div id="info" class="status"><p class="conte">${cap[cohete].status}</p><h3>Status</h3></div>
-                <div id="info" class="type"><p class="conte">${cap[cohete].type}</p><h3>Type</h3></div>
+                <div id="info" class="type"><p class="conte_">${cap[cohete].type}</p><h3>Type</h3></div>
             `;  // Muestra los datos principales de la cápsula (número de reutilizaciones, aterrizajes, número de serie, estado y tipo)
 
         // Inserta la última actualización de la cápsula en el HTML

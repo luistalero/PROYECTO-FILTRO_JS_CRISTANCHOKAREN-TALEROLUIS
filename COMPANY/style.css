@@ -10,7 +10,7 @@ html{
     place-items: center;
 }   
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
     background: linear-gradient(217deg, #13142D, rgba(255, 0, 0, 0) 100%),
         linear-gradient(127deg, #13142D, #69AEFF 50.45%),
         linear-gradient(127deg, #FFFFFF, #69AEFF 50.45%);
@@ -24,7 +24,7 @@ body {
 
 .principal {
     max-width: 1200px;
-    margin: 2rem; /* Espaciado horizontal */
+    margin: 3rem; /* Espaciado horizontal */
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
 }
