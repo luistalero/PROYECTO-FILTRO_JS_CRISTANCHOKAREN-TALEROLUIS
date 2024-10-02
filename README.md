@@ -1,28 +1,64 @@
-# Proyecto: EL-COHETE
+# SpaceX Interface
 
-Este proyecto se centra en la creación de una página web basada en los lineamientos y contenido del enlace de Notion titulado **EL-COHETE**.
+## Descripción del Proyecto
 
-## Descripción
+**SpaceX Interface** es una aplicación diseñada para explorar el fascinante mundo de la exploración espacial utilizando la API REST de SpaceX. Esta plataforma está dirigida a desarrolladores, entusiastas del espacio y profesionales del sector aeroespacial, ofreciendo acceso a datos clave sobre las misiones recientes de SpaceX. La interfaz permite a los usuarios consultar información sobre cohetes, cápsulas, compañías e historia, facilitando una comprensión clara de los avances en la tecnología espacial y su impacto en el futuro de la exploración.
 
-El objetivo de este proyecto es implementar una página web que siga las instrucciones y requisitos descritos en el enlace de Notion. La página web incluirá varios aspectos de desarrollo web utilizando principalmente HTML, CSS y JavaScript, alineados con la temática central de **EL COHETE**.
+## Página Principal
 
-## Contenidos del Proyecto
+La página principal de la aplicación presenta una introducción a la interfaz de control de vuelo de SpaceX. Ofrece un resumen del propósito de la plataforma, destacando su capacidad para acceder a información detallada y actualizada sobre las misiones de SpaceX. El diseño es atractivo e interactivo, invitando a los usuarios a explorar más a fondo las diversas secciones de la aplicación.
 
-1. **Estructura HTML**: La página está construida con HTML básico para proporcionar una estructura semántica clara y bien organizada.
-2. **Diseño CSS**: Se implementa un diseño sencillo y responsivo que cumple con los lineamientos de estilo y presentación visual requeridos.
-3. **Funcionalidad JavaScript**: Se añaden características interactivas utilizando JavaScript, conforme a las especificaciones mencionadas en el enlace.
+### Componentes de la Página Principal
 
-## Estructura del Proyecto
+- **Título**: Presenta el nombre de la aplicación y su propósito, utilizando un diseño llamativo que resalta la temática espacial.
+- **Descripción**: Dos párrafos que explican la finalidad de la plataforma y su utilidad para desarrolladores y entusiastas del espacio, enfatizando la importancia de los datos sobre misiones recientes.
+- **Imagen**: Un enlace a una imagen representativa de SpaceX, que actúa como botón para acceder a la sección de cohetes, fomentando la interacción del usuario.
 
-- `index.html`: Página principal del proyecto.
-- `style.css`: Archivo de estilos que define el aspecto visual de la página.
-- `script.js`: Archivo de JavaScript que contiene la lógica para la interactividad de la página.
-- `assets/`: Carpeta donde se almacenan las imágenes, iconos y otros archivos multimedia necesarios para la página.
+## Módulo de Cohetes (Rockets)
+
+La sección de cohetes proporciona información detallada sobre los lanzamientos y las especificaciones técnicas de los cohetes utilizados por SpaceX. Al acceder a esta sección, los usuarios pueden ver:
+
+- **Detalles de cada cohete**: Incluyendo nombre, tipo, altura y capacidad de carga.
+- **Historial de lanzamientos**: Información sobre los lanzamientos pasados, próximos y su estado, permitiendo un análisis de la evolución de los lanzamientos de cohetes.
+
+Este módulo permite a los usuarios explorar el impacto de los cohetes en la exploración espacial y cómo han evolucionado con el tiempo.
+
+## Módulo de Cápsulas (Capsules)
+
+La sección de cápsulas ofrece una visión general de las naves espaciales utilizadas por SpaceX. Los usuarios pueden acceder a:
+
+- **Características de cada cápsula**: Información sobre la misión para la que fue diseñada, su capacidad y los logros alcanzados.
+- **Detalles de misiones**: Incluyendo los lanzamientos en los que participaron y su contribución a la exploración espacial, lo que permite a los usuarios comprender mejor el papel de cada cápsula en las misiones.
+
+Este módulo ayuda a comprender la evolución de las tecnologías espaciales de SpaceX y cómo cada cápsula ha jugado un papel crucial en la exploración.
+
+## Módulo de Compañías (Company)
+
+En la sección de compañías, se ofrece información sobre SpaceX como organización. Los usuarios pueden aprender sobre:
+
+- **Historia de la compañía**: Desde su fundación hasta sus hitos más importantes, permitiendo un contexto histórico sobre su crecimiento.
+- **Misión y visión**: El enfoque de SpaceX hacia la innovación y la exploración espacial, lo que refleja su compromiso con el avance tecnológico.
+- **Logros destacados**: Incluyendo lanzamientos significativos y desarrollos tecnológicos, proporcionando una visión completa del impacto de SpaceX en la industria aeroespacial.
+
+Este módulo proporciona un contexto valioso sobre cómo SpaceX ha cambiado el panorama de la exploración espacial.
+
+## Módulo de Historia (History)
+
+La sección de historia ofrece un recorrido cronológico de los eventos más significativos en la trayectoria de SpaceX. Los usuarios pueden explorar:
+
+- **Línea de tiempo de eventos clave**: Que incluye lanzamientos importantes, desarrollos tecnológicos e hitos, facilitando un entendimiento de la evolución de la empresa.
+- **Análisis de impacto**: Reflexiones sobre cómo estos eventos han influido en la industria aeroespacial y en la exploración espacial en general, permitiendo a los usuarios apreciar la relevancia de cada hito.
+
+Este módulo ayuda a los usuarios a entender el legado y el futuro de SpaceX en la exploración del espacio.
+
+## Conclusión
+
+El proyecto "SpaceX Interface" es una herramienta educativa y de exploración que permite a los usuarios acceder a información actualizada sobre las misiones de SpaceX. Con una interfaz intuitiva y datos detallados, la plataforma busca inspirar a una nueva generación de entusiastas de la exploración espacial.
 
 ## Instalación
 
 Para visualizar y trabajar con este proyecto localmente:
 
-1. Clonar el repositorio:
+1. **Clonar el repositorio**: Usa el siguiente comando para clonar el repositorio en tu máquina local.
    ```bash
-   https://github.com/luistalero/PROYECTO-FILTRO_JS_CRISTANCHOKAREN-TALEROLUIS.git
+   git clone https://github.com/luistalero/PROYECTO-FILTRO_JS_CRISTANCHOKAREN-TALEROLUIS.git
