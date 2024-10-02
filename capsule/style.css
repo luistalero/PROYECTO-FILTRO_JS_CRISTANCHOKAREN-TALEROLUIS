@@ -271,4 +271,7 @@ h3{
         text-align: center;
         margin: 1.2rem 0;
     }
+    h4, .texto{
+        font-size: 0.70rem;
+    }
 }
