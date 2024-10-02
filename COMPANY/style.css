@@ -24,7 +24,7 @@ body {
 
 .principal {
     max-width: 1200px;
-    margin: 3rem; /* Espaciado horizontal */
+    margin: 1.90rem;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
 }
@@ -203,7 +203,7 @@ h4 {
 }
 
 .botones {
-    position: relative;
+    position: fixed;
     display: flex;
     background-color: #032d5e;
     bottom: 0;
@@ -212,12 +212,14 @@ h4 {
     justify-content: space-evenly;
     left: 50%;
     transform: translateX(-50%);
+    font-family: light;
     clip-path: polygon(6% 0, 94% 0, 100% 100%, 0% 100%);
     padding: 0 4%;
 }
 
 .icons {
     width: 10%;
+    margin-top: 0%;
     background-color: inherit;
     border: none;
     cursor: pointer;
@@ -252,6 +254,7 @@ h4 {
     height: 4%;
     background-color: white;
 }
+
 .iconsR {
     display: inline-flex;
 }   

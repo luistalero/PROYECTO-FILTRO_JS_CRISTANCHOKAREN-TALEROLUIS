@@ -30,12 +30,12 @@ body{
         font-family: 'Roboto', sans-serif;
 
 }
-.botones{
+.botones {
     position: fixed;
     display: flex;
     background-color: #032d5e;
     bottom: 0;
-    width: 35rem;
+    width: 70vw;
     height: 5rem;
     justify-content: space-evenly;
     left: 50%;
@@ -43,31 +43,36 @@ body{
     font-family: light;
     clip-path: polygon(6% 0, 94% 0, 100% 100%, 0% 100%);
     padding: 0 4%;
-    margin-top: 2rem;
 }
-.icons{
-    width: 15%;
+
+.icons {
+    width: 10%;
     margin-top: 0%;
     background-color: inherit;
     border: none;
     cursor: pointer;
     position: relative;
 }
-.icons img{
+
+.icons img {
     width: 30%;
 }
+
 .icons a {
     text-decoration: none;
 }
-.icons p{
+
+.icons p {
     margin: 0;
     text-align: center;
     color: white;
 }
-.actual{
+
+.actual {
     margin: 0;
 }
-.actual::after{
+
+.actual::after {
     position: absolute;
     content: '';
     width: 100%;
@@ -77,6 +82,7 @@ body{
     height: 4%;
     background-color: white;
 }
+
 #all{
     margin-bottom: 5rem;
     min-height: 100vh;
